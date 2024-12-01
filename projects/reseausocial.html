@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet E-commerce</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-content">
+                <div class="liens-gauche">
+                    <a href="../index.html"> Home</a>
+                    <a href="../index.html#projets"> Projects</a>
+                </div>
+                <div class="logo">
+                    <a class="logo">Sergueï</a>
+                </div>
+                <div class="liens-droite">
+                    <a href="../index.html#about-me-section"> About Me </a>
+                    <a href="../contacts.html"> Contact</a>
+                </div>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="../index.html"> Home</a>
+                <a href="../projets.html"> Projects</a>
+                <a href="../index.html#about-me-section"> About Me </a>
+                <a href="../contacts.html"> Contact</a>
+            </div>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const mobileMenu = document.querySelector('.mobile-menu');
+        
+                burgerMenu.addEventListener('click', function(event) {
+                    mobileMenu.classList.toggle('active');
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+                });
+        
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+    </header>
+    <section class="project-ecommerce">
+        <h1 class="project-title">Réseau Social Minimaliste</h1>
+        <h1 class="project-d">Le projet "Réseau Social Minimaliste" vise à créer une plateforme de réseau social simple et épurée, offrant aux utilisateurs la possibilité de se connecter, partager des mises à jour et interagir de manière basique. L'objectif est de fournir une expérience utilisateur fluide, sans les distractions et les complexités des réseaux sociaux traditionnels, tout en mettant l'accent sur la simplicité et la convivialité.</h1>
+        </p>
+        <h2>Fonctionnalités principales :</h2>
+        <ul class="project-features">
+            <li>Gestion des utilisateurs : Inscription, connexion sécurisée, et gestion de profils personnalisés.</li>
+            <li>Catalogue de produits : Affichage dynamique des produits avec filtres avancés (catégories, prix, popularité).</li>
+            <li>Panier d'achat : Ajout, modification, et suppression d'articles, avec récapitulatif en temps réel.</li>
+            <li>Paiement sécurisé : Intégration de passerelles de paiement comme Stripe ou PayPal, avec gestion des erreurs et sécurité renforcée.</li>
+            <li>Espace administrateur : Tableau de bord pour la gestion des produits, des commandes et des utilisateurs.</li>
+        </ul>
+
+        <h2>Technologies utilisées :</h2>
+        <ul class="project-technologies">
+            <li><strong>Front-end :</strong> HTML5, CSS3, JavaScript (avec React.js ou Vue.js).</li>
+            <li><strong>Back-end :</strong> Node.js avec Express ou Django pour la gestion des API.</li>
+            <li><strong>Base de données :</strong> MongoDB ou PostgreSQL pour le stockage des données.</li>
+        </ul>
+        <div>
+            <section class="photos">
+                <img src="reseausocial.avif" width="600" height="400">
+            </section>
+        </div>
+    </section>
+</body>
+</html>

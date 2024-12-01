@@ -1,0 +1,480 @@
+/* Importation de la police 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.liens-gauche, .liens-droite {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: black;
+    width: 60%;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #b74b4b;
+    color: white;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+.titre_projets {
+    font-size: x-large;
+    color: #b74b4b;
+}
+
+@media (max-width: 400px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width: 768px){
+    .home-content nav{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .liens-gauche, .liens-droite {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+.titre-projet h1{
+    text-align: center;
+    font-size: 10rem;
+    font-weight: 700;
+    margin-top: 50px;
+    border-bottom: 3px solid #b74b4b;
+}
+
+.rectangle {
+    width: 100%;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.part {
+    flex: 1;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-size: small;
+    font-weight: 700;
+    transition: background-color 0.3s, box-shadow 0.3s;  /* Transition fluide pour l'illumination */
+}
+
+.part:hover {
+    background-color: white;  /* Changer la couleur de fond au survol */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Ajouter une ombre portée */
+    color:#b74b4b
+}
+
+/* Lorsque l'élément est cliqué, on applique une couleur de fond plus intense */
+.part.active {
+    background-color: #b74b4b;  /* Fond vert pour l'élément sélectionné */
+    color: white;  /* Changer la couleur du texte en blanc */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Augmenter l'ombre portée */
+}
+/* Styles de base */
+.grand-projet {
+    border: 0px solid white;
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+.rectangle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0px solid white;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-contour {
+    /* Conteneur d'image, vous pouvez ajouter des styles ici */
+}
+
+.image-projet {
+    width: 100%;
+    height: auto;
+}
+
+.rectangle-titre {
+    position: absolute;
+    top: 15px;
+    left: 29%;
+    border: 0px solid white;
+    height: 75px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.rectangle-stitre {
+    position: absolute;
+    top: 20%;
+    left: 29%;
+    border: 0px solid white;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.rectangle-date {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.rectangle-f1,
+.rectangle-f2,
+.rectangle-f3 {
+    position: absolute;
+    left: 78%;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #b74b4b;
+}
+
+.rectangle-f1 {
+    top: 5%;
+}
+
+.rectangle-f2 {
+    top: 15%;
+}
+
+.rectangle-f3 {
+    top: 25%;
+}
+
+.rectangle-description {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    border: 0px solid white;
+    height: 300px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 32px;
+}
+
+/* Fond du projet */
+.rectangle-fond {
+    border: 1px solid white;
+    height: 700px;
+    width: 500px;
+    background-color: white;
+}
+
+.grand-projet {
+    display: none;
+}
+
+/* Réactivité pour petits écrans */
+@media (max-width: 1200px) {
+    .rectangle-titre {
+        left: 20%;
+        width: 80%;
+        font-size: 1.8rem;
+    }
+
+    .rectangle-stitre {
+        left: 20%;
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
+    .rectangle-date {
+        left: 50%;
+        font-size: 1.8rem;
+    }
+
+    .rectangle-description {
+        top: 50%;
+        left: 10%;
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .rectangle-image {
+        height: 200px;
+        width: 200px;
+        top: 10px;
+    }
+
+    .image-projet {
+        width: 100%;
+        height: auto;
+    }
+
+    .rectangle-f1,
+    .rectangle-f2,
+    .rectangle-f3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Pour les très petits écrans comme les mobiles */
+    .rectangle-titre {
+        left: 10%;
+        width: 80%;
+        font-size: 1.6rem;
+    }
+
+    .rectangle-stitre {
+        left: 10%;
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .rectangle-date {
+        left: 50%;
+        font-size: 1.6rem;
+    }
+
+    .rectangle-description {
+        top: 55%;
+        left: 5%;
+        width: 90%;
+        font-size: 1rem;
+        line-height: 28px;
+    }
+
+    .rectangle-image {
+        height: 150px;
+        width: 150px;
+        top: 10px;
+    }
+
+    .image-projet {
+        width: 100%;
+        height: auto;
+    }
+
+    .rectangle-f1,
+    .rectangle-f2,
+    .rectangle-f3 {
+        font-size: 1rem;
+    }
+
+    .rectangle-fond {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Pour les petits écrans de téléphone */
+    .rectangle-titre {
+        left: 30%;
+        width: 80%;
+        font-size: 1.4rem;
+    }
+
+    .rectangle-stitre {
+        left: 25%;
+        width: 90%;
+        top:75px;
+        font-size: 0.9rem;
+    }
+
+    .rectangle-date {
+        left: 60%;
+        top:98px;
+        font-size: 1.4rem;
+    }
+
+    .rectangle-description {
+        top: 60%;
+        left: 5%;
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .rectangle-image {
+        height: 120px;
+        width: 120px;
+        top: 5px;
+    }
+
+    .image-projet {
+        width: 100%;
+        height: auto;
+    }
+
+    .rectangle-f1,
+    .rectangle-f2,
+    .rectangle-f3 {
+        font-size: 0.9rem;
+        left:0px;
+        margin-top: 100px;
+    }
+
+    .rectangle-fond {
+        width: 100%;
+    }
+}

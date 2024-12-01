@@ -1,0 +1,403 @@
+/* Importation de la police 'Poppins' avec différents poids */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: ;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: default;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.liens-gauche {
+    display: flex;
+    gap: 20px;
+}
+
+.liens-droite {
+    display: flex;
+    gap: 20px;
+}
+
+/* Section About Me */
+.about-me-section {
+    color: white;
+    padding:.0px;
+    padding-top: 0px;
+    margin-top: ; /* Enlever tout espace inutile au-dessus */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Intro */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Formations */
+.formations {
+    margin-top: 50px;
+}
+
+h2 {
+    color: #b74b4b; /* Couleur de "Formations"*/
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #b74b4b; /* Frise */
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Frise */
+.frise {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.frise-item {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    z-index: 1;
+}
+
+.frise-item:before {
+    content: '';
+    position: absolute;
+    top: -42px; /* Départ des traits frise > boîte */
+    left: 50%;
+    width: 2px;
+    height: 43px; /* Longueur trait frise > boîte */
+    background-color: #b74b4b;
+    transform: translateX(-50%);
+}
+
+.frise-item:last-child:after {
+    content: ">";
+    position: absolute;
+    right: -9px;
+    top: -32.006%;
+    font-size: 2rem;
+    color: #b74b4b;
+    transform: translateY(-50%);
+}
+
+.frise-contenu {
+    background-color: #fff;
+    border: 2px solid #b74b4b;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.frise-contenu h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.frise-contenu p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Section Experience */
+.experience {
+    display: flex;
+    flex-wrap: wrap; /* S'assurer que les éléments ne se chevauchent pas */
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 10px 20px;
+    gap: 50px; /* Espace entre photo et texte */
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* Assure que l'alignement du texte et de l'image reste en haut */
+}
+
+.cv-photo {
+    width: 350px; /* Taille initiale de l'image */
+    height: auto;
+    transition: all 0.3s ease; /* Transition pour un effet fluide */
+    cursor: pointer;
+    z-index: 2; /* Assurez-vous que l'image d'origine est au-dessus du texte */
+}
+
+.cv-photo-doublon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajustez la taille agrandie selon vos préférences */
+    max-width: 600px;
+    display: none; /* Masqué par défaut */
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none; 
+    z-index: 9998;
+}
+
+.cv-text {
+    flex: 2; 
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 0; 
+    position: relative;
+    max-width: 100%; 
+    word-wrap: break-word;
+    box-sizing: border-box;
+    z-index: 1; 
+}
+
+.cv-text h2 {
+    color: #b74b4b;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cv-text p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.active {
+    display: block;
+}
+.cv-text {
+    flex: 2;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: -10px;
+    position: relative;
+    max-width: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.cv-text h2 {
+    color: #b74b4b;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cv-text p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .frise {
+        flex-direction: column;
+    }
+
+    .frise-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .frise-item:before {
+        display: none;
+    }
+
+    .frise-item:last-child:after {
+        display: none;
+    }
+
+    .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv-photo {
+        max-width: 100%;
+    }
+
+    .cv-text {
+        padding-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cv {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cv-text {
+        width: 80%;
+    }
+}
+
+/* Pour grands écrans (réinitialiser les espaces et positions) */
+@media (min-width: 769px) {
+    /* Restaurer la disposition de la section expérience */
+    .experience {
+        display: flex;
+        margin-top: 100px;
+        padding: 20px;
+        align-items: flex-start;
+        gap: 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cv-photo {
+        width: 350px;
+        height: auto;
+        border-radius: 0%;
+        transition: transform 0.3s ease;
+    }
+
+    .cv-text {
+        flex: 2;
+        padding-left: 20px;
+        text-align: left;
+        margin-top: -10px;
+        position: relative;
+        max-width: 100%;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .cv-text h2 {
+        color: #b74b4b;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .cv-text p {
+        line-height: 1.6;
+        margin-top: 0;
+    }
+
+    /* Restaurer les lignes dans la frise */
+    .frise-item:before {
+        display: block;
+    }
+
+    .frise-item:last-child:after {
+        display: block;
+    }
+}
+.cv-download {
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du bouton */
+    text-align: center; /* Centre le bouton */
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #b74b4b; /* Couleur du bouton */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none; /* Retirer le soulignement du lien */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #9c3e3e; /* Couleur lors du survol */
+    transform: scale(1.1); /* Effet d'agrandissement */
+}

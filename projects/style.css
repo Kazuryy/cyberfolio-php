@@ -1,0 +1,747 @@
+/* Importation de la police 'Poppins' avec différents poids */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;/* Réinitialise la marge à 0 pour tous les éléments */
+    padding: 0;/* Réinitialise le padding à 0 pour tous les éléments */
+    box-sizing: border-box;/* Définit le modèle de boîte à border-box pour inclure les bordures et le padding dans les dimensions totales */
+    text-decoration: none;/* Supprime la décoration de texte pour tous les liens */
+    border: none;/* Supprime les bordures pour tous les éléments */
+    outline: none;/* Supprime les contours pour tous les éléments */
+    font-family: 'Poppins', sans-serif;/* Définit la police par défaut à 'Poppins' pour tous les éléments */
+}
+
+html{
+    font-size: 62.5%;/* Définit la taille de police de base à 62.5% de la taille par défaut du navigateur (généralement 16px), 
+    ce qui équivaut à 10px. Cela facilite l'utilisation des rems pour les tailles de police et les espacements. */
+}
+
+body{
+    width: 100%;/* Largeur de 100% */
+    height: 100vh;/* Hauteur de 100% de la hauteur de la fenêtre */
+    overflow-x: hidden;/* Désactive le défilement horizontal */
+    background-color: black;/* Couleur de fond noire */
+    color: white;/* Couleur du texte blanche */
+}
+
+header{
+  width: 100%;
+  background-color: black;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.logo{
+    font-size: 3rem;/* Taille de police de 3rem */
+    color: #b74b4b; /* Couleur du texte */
+    font-weight: 800;/* Poids de la police très gras */
+    cursor: pointer;/* Change le curseur en pointeur (main) */
+}
+
+nav a{
+    font-size: 1.8rem;/* Taille de police de 1.8rem */
+    color: white;/* Couleur du texte blanche */
+    margin-left: 4rem;/* Marge à gauche de 4rem */
+    font-weight: 500;/* Poids de la police moyen */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
+}
+
+nav {
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.burger-menu {
+  font-size: 2.4rem;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.liens-gauche {
+  display: flex;
+  gap:20px;
+}
+
+.liens-droite {
+  display: flex;
+  gap: 20px;
+}
+
+section{
+    min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
+    padding: 5rem 9% 5rem;/* Padding de 5rem en haut et en bas, et 9% sur les côtés */
+}
+
+span{
+    color: #b74b4b;/* Couleur du texte */
+}
+
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px; /* Adjust according to your header height */
+  right: 10px; /* Adjust to position the menu from the right edge */
+  background-color: black; /* Adjust according to your design */
+  width: 60%; /* Adjust the width of the menu */
+  max-width: 250px; /* Set a maximum width for the menu */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+  border-radius: 8px; /* Rounded corners for the menu box */
+  padding: 1rem; /* Padding inside the menu box */
+  z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+  color: white; /* Ensure text color is visible */
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+/* Conteneur de la box */
+.site {
+    background-color: #0a0a0a; /* Fond blanc */
+    border: 1px solid #ddd; /* Bordure fine */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    margin: 10px auto; /* Centrage avec un espacement */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    text-align: center; /* Texte centré */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+  
+  /* Animation au survol */
+.site:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+  
+  /* Titre */
+.site-title {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold;
+    color: #333; /* Couleur sombre */
+    margin-bottom: 10px;
+}
+  
+  /* Contenu */
+.site-content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Lisibilité */
+}
+  
+  /* Bouton */
+.site-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+  
+.site-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.appgestion {
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.appgestion:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+  /* Titre */
+.appgestion-title {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold;
+    color: #333; /* Couleur sombre */
+    margin-bottom: 10px;
+}
+  
+  /* Contenu */
+.appgestion-content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Lisibilité */
+}
+  
+  /* Bouton */
+.appgestion-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+   transition: background-color 0.3s ease;
+}
+  
+.appgestion-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+
+.reseausocial {
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.reseausocial:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+  /* Titre */
+.reseausocial-title {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold;
+    color: #333; /* Couleur sombre */
+    margin-bottom: 10px;
+}
+  
+  /* Contenu */
+.reseausocial-content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Lisibilité */
+}
+  
+  /* Bouton */
+.reseausocial-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+  
+.reseausocial-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.dashboard {
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.dashboard:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+  /* Titre */
+.dashboard-title {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold;
+    color: #333; /* Couleur sombre */
+    margin-bottom: 10px;
+}
+  
+  /* Contenu */
+.dashboard-content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Lisibilité */
+}
+  
+  /* Bouton */
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+  
+.dashboard-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.jeu {
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.jeu:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+  /* Titre */
+.jeu-title {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold;
+    color: #333; /* Couleur sombre */
+    margin-bottom: 10px;
+  }
+  
+  /* Contenu */
+.jeu-content {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Lisibilité */
+}
+  
+  /* Bouton */
+.jeu-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+  
+.jeu-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+/* Conteneur de la box */
+.site0 {
+  background-color: #0a0a0a; /* Fond blanc */
+  border: 1px solid #ddd; /* Bordure fine */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px; /* Espacement interne */
+  margin: 10px auto; /* Centrage avec un espacement */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  text-align: center; /* Texte centré */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.site0:hover {
+  transform: translateY(-5px); /* Légère élévation */
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre */
+.site0-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold;
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px;
+}
+
+/* Contenu */
+.site0-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Lisibilité */
+
+}
+
+/* Bouton */
+.site0-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur principale */
+  color: black; /* Couleur du texte */
+  text-decoration: none;
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease;
+}
+
+.site0-button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.appgestion0 {
+  background-color: black;
+  border: white solid 1px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.appgestion0:hover {
+  transform: translateY(-5px); /* Légère élévation */
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre */
+.appgestion0-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold;
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px;
+}
+
+/* Contenu */
+.appgestion0-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Lisibilité */
+}
+
+/* Bouton */
+.appgestion0-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur principale */
+  color: black; /* Couleur du texte */
+  text-decoration: none;
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease;
+}
+
+.appgestion0-button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+
+.reseausocial0 {
+  background-color: black;
+  border: white solid 1px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.reseausocial0:hover {
+  transform: translateY(-5px); /* Légère élévation */
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre */
+.reseausocial0-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold;
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px;
+}
+
+/* Contenu */
+.reseausocial0-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Lisibilité */
+}
+
+/* Bouton */
+.reseausocial0-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur principale */
+  color: black; /* Couleur du texte */
+  text-decoration: none;
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease;
+}
+
+.reseausocial0-button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.dashboard0 {
+  background-color: black;
+  border: white solid 1px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.dashboard0:hover {
+  transform: translateY(-5px); /* Légère élévation */
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre */
+.dashboard0-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold;
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px;
+}
+
+/* Contenu */
+.dashboard0-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Lisibilité */
+}
+
+/* Bouton */
+.dashboard0-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur principale */
+  color: black; /* Couleur du texte */
+  text-decoration: none;
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease;
+}
+
+.dashboard0-button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.jeu0 {
+  background-color: black;
+  border: white solid 1px;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.jeu0:hover {
+  transform: translateY(-5px); /* Légère élévation */
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+/* Titre */
+.jeu0-title {
+  font-size: 1.5rem; /* Taille du texte */
+  font-weight: bold;
+  color: #333; /* Couleur sombre */
+  margin-bottom: 10px;
+}
+
+/* Contenu */
+.jeu0-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6; /* Lisibilité */
+}
+
+/* Bouton */
+.jeu0-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Couleur principale */
+  color: black; /* Couleur du texte */
+  text-decoration: none;
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease;
+}
+
+.jeu0-button:hover {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.titre_projets {
+  font-size:x-large;
+}
+
+.project-description {
+  display: flex; /* Utilisation de Flexbox pour aligner */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  min-height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+  text-align: center; /* Centre le texte */
+  padding: 2rem; /* Ajoute un espace autour pour éviter que le texte touche les bords */
+}
+
+.project-ecommerce {
+  font-size: 2.4rem; /* Taille de police ajustée pour être plus lisible */
+  font-weight: 600; /* Police semi-grasse pour une meilleure hiérarchie visuelle */
+  line-height: 1.6; /* Hauteur de ligne pour un espacement agréable */
+  color: white; /* Texte blanc pour rester cohérent */
+  background-color: #1a1a1a; /* Fond sombre pour contraster avec le texte */
+  border: 2px solid #b74b4b; /* Bordure pour définir visuellement la section */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 2rem 4rem; /* Espacement interne pour aérer le contenu */
+  box-shadow: 0 0 15px rgba(183, 75, 75, 0.5); /* Ombre subtile pour donner un effet 3D */
+}
+
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #b74b4b;
+    margin-bottom: 1rem;  /* Espacement réduit */
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #b74b4b;
+  margin: 1rem 0;  /* Moins d'espace avant et après chaque titre */
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #b74b4b;
+    margin: 1rem 0;  /* Moins d'espace avant et après chaque titre */
+}
+
+.project-d,
+.project-challenges,
+.project-value {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;  /* Espacement réduit */
+    color: white;
+}
+
+.project-features,
+.project-technologies {
+    list-style: none; /* Enlève les puces */
+    padding: 0;
+    margin: 0;  /* Supprime les marges par défaut */
+    margin-bottom: 1rem; /* Un peu d'espace entre les listes */
+    text-align: center;
+    color: white;
+}
+
+.project-features li,
+.project-technologies li {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1rem; /* Réduit l'espace entre les éléments de liste */
+}
+
+ul {
+    padding-left: 2rem; /* Garde le décalage des puces */
+}
+
+ul li::before {
+    content: "✔"; /* Ajoute des coches */
+    color: #b74b4b;
+    margin-right: 1rem;
+}
+
+.photos {
+  text-align: center;
+  margin-right: 100px; 
+  display: block;
+
+}
+
+
+
+@media (max-width: 1000px){
+  .home{
+      gap: 4rem;
+  }
+}
+
+@media(max-width:995px){
+  .home{
+      flex-direction: column;
+      margin: 5rem 4rem;
+  }
+
+  .home .home-content h3{
+      font-size: 2.5rem;
+  }
+
+  .home-content h1{
+      font-size: 5rem;
+  }
+
+  .home-img img{
+      width: 70vw;
+      margin-top: 4rem;
+  }
+}
+
+@media(max-width: 768px){
+  .home-content nav{
+      font-size: 1rem;
+  }
+}
+
+/* Adjust the layout on mobile devices */
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0; /* Remove any default margin */
+    }
+
+    nav {
+      justify-content: flex-end;
+    }
+
+    .liens-gauche, .liens-droite {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}

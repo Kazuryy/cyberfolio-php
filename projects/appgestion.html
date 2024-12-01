@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet E-commerce</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-content">
+                <div class="liens-gauche">
+                    <a href="../index.html"> Home</a>
+                    <a href="../index.html#projets"> Projects</a>
+                </div>
+                <div class="logo">
+                    <a class="logo">Sergueï</a>
+                </div>
+                <div class="liens-droite">
+                    <a href="../index.html#about-me-section"> About Me </a>
+                    <a href="../contacts.html"> Contact</a>
+                </div>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <a href="../index.html"> Home</a>
+                <a href="../projets.html"> Projects</a>
+                <a href="../index.html#about-me-section"> About Me </a>
+                <a href="../contacts.html"> Contact</a>
+            </div>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerMenu = document.querySelector('.burger-menu');
+                const mobileMenu = document.querySelector('.mobile-menu');
+        
+                burgerMenu.addEventListener('click', function(event) {
+                    mobileMenu.classList.toggle('active');
+                    event.stopPropagation(); // Empêche le clic de se propager au document
+                });
+        
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !burgerMenu.contains(event.target)) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+    </header>
+    <section class="project-ecommerce">
+        <br>
+        <br>
+        <h1 class="project-title">Applications de Gestion de Tâches</h1>
+        <h1 class="project-d">Notre projet d'application de gestion de tâches vise à fournir une solution intuitive et efficace pour aider les utilisateurs à organiser et suivre leurs tâches quotidiennes. Conçu pour être facile à utiliser, cet outil permet aux utilisateurs de créer, modifier, supprimer et gérer leurs tâches en toute simplicité, tout en offrant une interface propre et moderne.</h1>
+        </p>
+
+        <h2>Fonctionnalités principales :</h2>
+        <ul class="project-features">
+            <li>Création de tâches : Ajoutez rapidement des tâches avec des titres, des descriptions et des dates d'échéance.</li>
+            <li>Gestion des priorités : Classez les tâches par priorité pour vous aider à vous concentrer sur l'essentiel.</li>
+            <li>État de la tâche : Marquez les tâches comme "En cours" ou "Terminé" pour suivre votre progression.</li>
+            <li>Notifications : Recevez des rappels pour les tâches importantes afin de ne jamais manquer une échéance.</li>
+            <li>Interface simple et moderne : Une interface utilisateur épurée, conçue pour une expérience fluide et agréable.</li>
+        </ul>
+
+        <h2>Technologies utilisées :</h2>
+        <ul class="project-technologies">
+            <li><strong>Front-end :</strong> React ou Vue.js pour une interface réactive et dynamique.</li>
+            <li><strong>Back-end :</strong> Node.js avec Express pour gérer les demandes du serveur et la logique métier.</li>
+            <li><strong>Base de données :</strong> MongoDB pour stocker les tâches et les informations de l'utilisateur.</li>
+        </ul>
+        <div>
+            <section class="photos">
+                <img src="gestiontaches.png" width="600" height="400">
+            </section>
+        </div>
+    </section>
+</body>
+</html>

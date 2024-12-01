@@ -1,0 +1,637 @@
+/* Importation de la police 'Poppins' avec différents poids */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.logo{
+    font-size: 3rem;/* Taille de police de 3rem */
+    color: #b74b4b; /* Couleur du texte */
+    font-weight: 800;/* Poids de la police très gras */
+    cursor: pointer;/* Change le curseur en pointeur (main) default*/
+    transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
+}
+
+nav a{
+    font-size: 1.8rem;/* Taille de police de 1.8rem */
+    color: white;/* Couleur du texte blanche */
+    margin-left: 4rem;/* Marge à gauche de 4rem */
+    font-weight: 500;/* Poids de la police moyen */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    border-bottom: 3px solid transparent;/* Bordure inférieure transparente de 3px */
+}
+
+nav {
+    display: fixed;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.liens-gauche {
+    display: flex;
+    gap:20px;
+}
+
+.liens-droite {
+    display: flex;
+    gap: 20px;
+}
+
+.about-me-section {
+    color: white;
+    padding:.0px;
+    padding-top: 0px;
+    margin-top: 0; /* Enlever tout espace inutile au-dessus */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+section{
+    min-height: 100vh;/* Hauteur minimale de 100% de la hauteur de la fenêtre */
+    padding: 5rem 9% 5rem;/* Padding de 5rem en haut et en bas, et 9% sur les côtés */
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.formations {
+    margin-top: 50px;
+}
+
+
+.working {
+    color: #b74b4b; /* Couleur de "Formations"*/
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #b74b4b; /* Frise */
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.edu {
+    color: #b74b4b; /* Couleur de "Formations"*/
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #b74b4b; /* Frise */
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* Frise */
+.frise {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.frise-item {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    z-index: 1;
+}
+
+.frise-item:before {
+    content: '';
+    position: absolute;
+    top: -42px; /* Départ des traits frise > boîte */
+    left: 50%;
+    width: 2px;
+    height: 43px; /* Longueur trait frise > boîte */
+    background-color: #b74b4b;
+    transform: translateX(-50%);
+}
+
+.frise-item:last-child:after {
+    content: ">";
+    position: absolute;
+    right: -9px;
+    top: -32.006%;
+    font-size: 2rem;
+    color: #b74b4b;
+    transform: translateY(-50%);
+}
+
+.frise-contenu {
+    background-color: #fff;
+    border: 2px solid #b74b4b;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.frise-contenu h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.frise-contenu p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Section Experience */
+.experience {
+    display: flex;
+    flex-wrap: wrap; /* S'assurer que les éléments ne se chevauchent pas */
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 10px 20px;
+    gap: 50px; /* Espace entre photo et texte */
+    max-width: 1200px;
+    align-items: flex-start; /* Assure que l'alignement du texte et de l'image reste en haut */
+}
+
+.cv-photo {
+    width: 350px; /* Taille initiale de l'image */
+    height: auto;
+    transition: all 0.3s ease; /* Transition pour un effet fluide */
+    cursor: pointer;
+    z-index: 2; /* Assurez-vous que l'image d'origine est au-dessus du texte */
+}
+
+.cv-photo-doublon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajustez la taille agrandie selon vos préférences */
+    max-width: 600px;
+    display: none; /* Masqué par défaut */
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none; 
+    z-index: 9998;
+}
+
+.cv-text {
+    flex: 2; 
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 0; 
+    position: relative;
+    max-width: 100%; 
+    word-wrap: break-word;
+    box-sizing: border-box;
+    z-index: 1; 
+}
+
+.cv-text h2 {
+    color: #b74b4b;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cv-text p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.active {
+    display: block;
+}
+
+.home{
+    display: flex;/* Utilise Flexbox pour aligner les éléments horizontalement */
+    justify-content: center;/* Centre les éléments horizontalement */
+    align-items: center;/* Centre les éléments verticalement */
+    gap: 8rem;/* Espace de 8rem entre les éléments */
+    background-color: black;/* Couleur de fond noire */
+}
+
+.home .home-content h1{
+    font-size: 6rem;/* Taille de police de 6rem */
+    font-weight: 700;/* Poids de la police très gras */
+    line-height: 1.3;/* Hauteur de ligne de 1.3 */
+}
+
+span{
+    color: #b74b4b;/* Couleur du texte */
+}
+
+.home-content h3{
+    font-size: 4rem;/* Taille de police de 4rem */
+    margin-bottom: 1rem;/* Marge inférieure de 1rem */
+    font-weight: 700;/* Poids de la police très gras */
+}
+
+.home-content p{
+    font-size: 1.6rem;/* Taille de police de 1.6rem */
+}
+
+.home-img{
+    border-radius: 50%;/* Bordure arrondie à 50% pour créer un effet de cercle */
+}
+
+.home-img img{
+    position: relative;/* Position relative pour permettre un positionnement par rapport à son conteneur */
+    width: 32vw;/* Largeur de 32% de la largeur de la fenêtre */
+    border-radius: 50%;/* Bordure arrondie à 50% pour créer un effet de cercle */
+    box-shadow: 0 0 25px solid #b74b4b;/* Ombre portée avec une couleur spécifique */
+    cursor: pointer;/* Change le curseur en pointeur (main) */
+    transition: 0.2s linear;/* Transition douce de 0.2s pour les changements de style */
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;/* Taille de police de 1.8rem */
+    font-weight: 500;/* Poids de la police moyen */
+}
+
+.social-icons a{
+    display: inline-flex;/* Utilise Flexbox pour aligner les éléments horizontalement et verticalement */
+    justify-content: center;
+    align-items: center;
+    width: 4rem;/* Dimensions de l'icône */
+    height: 4rem;
+    background-color: transparent;/* Couleur de fond transparente */
+    border: 0.2rem solid #b74b4b;/* Bordure de 0.2rem avec une couleur spécifique */
+    font-size: 2rem;/* Taille de police de 2rem */
+    border-radius: 50%;/* Bordure arrondie à 50% pour créer un effet de cercle */
+    margin: 3rem 1.5rem 3rem 0;/* Marge autour de l'icône */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    color: #b74b4b;/* Couleur du texte */
+}
+
+.social-icons a:hover{
+    color: black;/* Change la couleur du texte en noir lorsqu'on passe la souris dessus */
+    background-color: #b74b4b;/* Change la couleur de fond en #b74b4b lorsqu'on passe la souris dessus */
+}
+
+.btn{
+    display: inline-block;/* Affichage en ligne avec bloc */
+    padding: 1rem 2.8rem;/* Padding interne de 1rem en haut et en bas, et 2.8rem sur les côtés */
+    background-color: black;/* Couleur de fond noire */
+    border-radius: 4rem;/* Bordure arrondie de 4rem */
+    font-size: 1.6rem;/* Taille de police de 1.6rem */
+    color: #b74b4b;/* Couleur du texte */
+    letter-spacing: 0.3rem;/* Espacement des lettres de 0.3rem */
+    font-weight: 600;/* Poids de la police gras */
+    border: 2px solid #b74b4b;/* Bordure de 2px avec une couleur spécifique */
+    transition: 0.3s ease;/* Transition douce de 0.3s pour les changements de style */
+    cursor: pointer;/* Change le curseur en pointeur (main) */
+}
+
+.btn:hover{
+    transform: scale3d(1.03);/* Agrandit légèrement le bouton en 3D lorsqu'on passe la souris dessus */
+    background-color: #b74b4b;/* Change la couleur de fond en #b74b4b lorsqu'on passe la souris dessus */
+    color: black;/* Change la couleur du texte en noir lorsqu'on passe la souris dessus */
+    box-shadow: 0 0 25px #b74b4b;/* Ajoute une ombre portée avec une couleur spécifique */
+}
+
+.typing-text{
+    font-size: 34px;/* Taille de police de 34px */
+    font-weight: 600;/* Poids de la police gras */
+    min-width: 280px;/* Largeur minimale de 280px */
+}
+
+.typing-text span{
+    position: relative;/* Position relative pour permettre un positionnement par rapport à son conteneur */
+    color: #b74b4b;/* Couleur du texte */
+}
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjust according to your header height */
+    right: 10px; /* Adjust to position the menu from the right edge */
+    background-color: black; /* Adjust according to your design */
+    width: 60%; /* Adjust the width of the menu */
+    max-width: 250px; /* Set a maximum width for the menu */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 8px; /* Rounded corners for the menu box */
+    padding: 1rem; /* Padding inside the menu box */
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+    color: white; /* Ensure text color is visible */
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.bordered {
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.bordered:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* Ombre plus marquée */
+}
+
+
+/* Bouton */
+.bordered-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Couleur principale */
+    color: black; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+  
+.bordered-button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.titre_projets {
+    font-size:x-large;
+    color: #b74b4b;
+}
+
+@media (max-width: 400px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 768px){
+    .home-content nav{
+        font-size: 1rem;
+    }
+}
+
+/* Hide the burger menu button by default */
+
+/* Adjust the layout on mobile devices */
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0; /* Remove any default margin */
+    }
+
+    .liens-gauche, .liens-droite {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .frise {
+        flex-direction: column;
+    }
+
+    .frise-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .frise-item:before {
+        display: none;
+    }
+
+    .frise-item:last-child:after {
+        display: none;
+    }
+
+    .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv-photo {
+        max-width: 100%;
+    }
+
+    .cv-text {
+        padding-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .cv {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cv-text {
+        width: 80%;
+    }
+}
+
+/* Pour grands écrans (réinitialiser les espaces et positions) */
+@media (min-width: 769px) {
+    /* Restaurer la disposition de la section expérience */
+    .experience {
+        display: flex;
+        margin-top: 100px;
+        padding: 20px;
+        align-items: flex-start;
+        gap: 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cv-photo {
+        width: 350px;
+        height: auto;
+        border-radius: 0%;
+        transition: transform 0.3s ease;
+    }
+
+    .cv-text {
+        flex: 2;
+        padding-left: 20px;
+        text-align: left;
+        margin-top: -10px;
+        position: relative;
+        max-width: 100%;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .cv-text h2 {
+        color: #b74b4b;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .cv-text p {
+        line-height: 1.6;
+        margin-top: 0;
+    }
+
+    /* Restaurer les lignes dans la frise */
+    .frise-item:before {
+        display: block;
+    }
+
+    .frise-item:last-child:after {
+        display: block;
+    }
+}
+.cv-download {
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus du bouton */
+    text-align: center; /* Centre le bouton */
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #b74b4b; /* Couleur du bouton */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none; /* Retirer le soulignement du lien */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #9c3e3e; /* Couleur lors du survol */
+    transform: scale(1.1); /* Effet d'agrandissement */
+}
+
+.titre-projet {
+    text-align: center;
+    font-size: 10rem;/* Taille de police de 6rem */
+    font-weight: 700;/* Poids de la police très gras */
+    margin-top: 20px;
+}
