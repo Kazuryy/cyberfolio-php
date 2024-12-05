@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-size: 5rem;/* Taille de police de 3rem */
+    position: relative;
+    color: #b74b4b; /* Couleur du texte */
+    font-weight: 800;/* Poids de la police très gras */
+    cursor: pointer;/* Change le curseur en pointeur (main) default*/
+    transition: 0.5s ease;/* Transition douce de 0.5s pour les changements de style */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.englobe {
+    border : 0px solid white;
+    display: block;
+    height: 550px;
+    margin: 50px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre {
+    position: relative;
+    border: 0px solid white;
+    font-size: small;
+    height: 40px;
+    font-weight: 700;
+    padding-left: 25%;
+    margin-top: 20px;
+}
+
+.form-group {
+    border:0px solid white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+label {
+    border: 0px solid white;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+input{
+    width: 100%;
+    padding: 1rem;
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    position: relative;
+    background-color: #b74b4b;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    left: 25%;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+button:hover{
+    transform: scale3d(1.03);
+    background-color: white;
+    color:#b74b4b;
+}
+
+a {
+    color: #b74b4b;
+}
+
+.password {
+    color:white;
+}
+
+input[type="password"]::-ms-reveal {
+    filter:invert(100%);
+}
+
+.inscription-ok {
+    font-size: 24px;  /* Taille du texte */
+    color: green !important;  /* Couleur du texte avec !important pour éviter que d'autres styles ne l'écrasent */
+    text-align: center;  /* Centrer le texte */
+    margin-top: 20px;  /* Ajouter un espace au-dessus */
+    font-weight: bold;  /* Mettre le texte en gras pour le rendre plus visible */
+}
+
+
+.checkPwnedBtn {
+    color: #b74b4b; /* Change la couleur du texte */
+    background-color: #f0f0f0; /* Change la couleur de fond */
+    width: 241px;
+}
+
+.pwnd {
+    border: 2px solid #b74b4b;
+    position: relative;
+    width: 890px;
+    left: 25%;
+    margin-top: 20px;
+    align-items: center;
+    display: block;
+}
+.titre-pwnd {
+    border: 0px solid white;
+    padding: 5px;
+}
+
+.nom-pwnd {
+    border: 0px solid white;
+    font-weight: 700;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #b74b4b;
+}
+
+.date-pwnd {
+    border: 0px solid white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.3rem;
+}
+.description-pwnd {
+    border: 0px solid white;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.data-pwnd {
+    border: 0px solid white;
+    padding:10px;
+    font-size: 1.5rem;
+}
+
+.data-couleur {
+    color: #b74b4b;
+}

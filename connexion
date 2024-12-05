@@ -1,0 +1,11 @@
+<?php
+class Authentification {
+    public static function verifier() {
+        session_start();
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: login.php');
+            exit();
+        }
+    }
+}
+?>

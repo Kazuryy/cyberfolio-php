@@ -1,0 +1,381 @@
+/* Importation de la police 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.liens-gauche, .liens-droite {
+    display: flex;
+    gap: 20px;
+}
+
+/* Menu burger pour mobile */
+.burger-menu {
+    font-size: 2.4rem;
+    display: none; /* Le menu burger sera affiché sur mobile */
+    cursor: pointer;
+}
+
+.about-me-section {
+    color: white;
+    padding: 0;
+    margin-top: 0;
+}
+.about-me-section {
+    color: white;
+    padding: 0;
+    margin-top: 0; /* Enlever tout espace inutile au-dessus */
+}
+
+.burger-menu {
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px; /* Adjust according to your header height */
+    right: 10px; /* Adjust to position the menu from the right edge */
+    background-color: black; /* Adjust according to your design */
+    width: 60%; /* Adjust the width of the menu */
+    max-width: 250px; /* Set a maximum width for the menu */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 8px; /* Rounded corners for the menu box */
+    padding: 1rem; /* Padding inside the menu box */
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #b74b4b; /* Adjust according to your design */
+    color: white; /* Ensure text color is visible */
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+main {
+    padding: 6rem 4% 2rem;
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+.contact-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+input{
+    width: 100%;
+    padding: 1rem;
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    background-color: #222;
+    border: 1px solid #444; 
+    width: 100%; /* Utiliser toute la largeur du parent */
+    height: 200px; /* Définir une hauteur fixe */
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.4rem 0;
+    background-color: #b74b4b;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a63c3c;
+}
+
+.success-message {
+    margin-top: 1rem;
+    color: #b74b4b;
+    font-weight: bold;
+}
+
+.contact-info {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Pour les écrans d'ordinateur, l'info est cachée par défaut */
+.contact-item .info {
+    font-size: 1.4rem;
+    display: none; /* Masquer l'information par défaut */
+    margin-bottom: 1rem;
+}
+
+/* Afficher les informations au survol de l'élément sur les écrans plus grands */
+.contact-item:hover .info {
+    display: block; /* Afficher l'information lors du survol */
+}
+
+/* Toujours afficher l'information sur les appareils mobiles */
+@media (max-width: 768px) {
+    .contact-item .info {
+        display: block; /* Toujours afficher les infos sur mobile */
+    }
+
+    .contact-item button {
+        display: block;
+        margin-top: 1rem;
+        background-color: #b74b4b;
+        padding: 0.1rem 0rem;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-item button:hover {
+        background-color: #a63c3c;
+    }
+}
+
+@media (max-width: 400px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .home-content nav {
+        font-size: 1rem;
+    }
+}
+
+/* Hide the burger menu button by default */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* Ajuster sur petits écrans */
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .liens-gauche, .liens-droite {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Menu déroulant */
+#menu-deroulant {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajustez en fonction de la hauteur de votre nav */
+    left: 50%; /* Positionne le côté gauche au milieu de l'écran */
+    transform: translateX(-50%); /* Décale le menu de sa propre largeur pour le centrer */
+    background-color: black;
+    border: 1px solid #b74b4b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-deroulant ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu-deroulant ul li {
+    padding: 8px 16px;
+}
+
+#menu-deroulant ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu-deroulant.visible {
+    display: flex;
+}
+/* Appliquer une transition douce */
+#menu-deroulant .deco {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white; /* Initialiser la couleur du texte */
+}
+
+/* Lors du survol, appliquer l'effet de transformation et la couleur */
+#menu-deroulant .deco:hover {
+    color: #b74b4b; /* Couleur du texte lors du survol */
+}
+
+#profil-mobile.icone {
+    display: none;
+}
+
+#icone-profil {
+    color:#b74b4b
+}
